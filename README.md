@@ -1,5 +1,7 @@
 # mcp-il-professionals
 
+<!-- mcp-name: io.github.olegsher-ds-2025/mcp-il-professionals -->
+
 Verify licensed professionals in Israel for AI agents: real-estate brokers, registered contractors, appraisers, CPAs, surveyors, private investigators — live from data.gov.il.
 
 **אימות בעלי מקצוע מורשים: מתווכים, קבלנים רשומים, שמאים, רואי חשבון, מודדים, חוקרים פרטיים**
@@ -28,21 +30,29 @@ government open data in plain language. No API key, no scraping — every call g
 
 ## Install
 
+No install needed with [uv](https://docs.astral.sh/uv/):
+
 ```bash
-pip install git+https://github.com/olegsher-ds-2025/mcp-il-professionals
+uvx mcp-il-professionals
 ```
 
 Claude Desktop / Claude Code (`.mcp.json`):
 
 ```json
-{ "mcpServers": { "il-professionals": { "command": "mcp-il-professionals" } } }
+{ "mcpServers": { "il-professionals": { "command": "uvx", "args": ["mcp-il-professionals"] } } }
 ```
+
+Or `pip install mcp-il-professionals`, or from source: `pip install git+https://github.com/olegsher-ds-2025/mcp-il-professionals`.
+
+Also listed in the official MCP Registry as `io.github.olegsher-ds-2025/mcp-il-professionals`.
 
 Run over HTTP (for remote hosting):
 
 ```bash
 MCP_TRANSPORT=http PORT=8000 mcp-il-professionals   # → http://localhost:8000/mcp
 ```
+
+Docker: `docker build -t mcp-il-professionals . && docker run -p 8000:8000 mcp-il-professionals`.
 
 Prefect Horizon entrypoint: `server.py:mcp`.
 
