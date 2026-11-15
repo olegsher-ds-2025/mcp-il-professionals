@@ -8,6 +8,7 @@ import os
 
 from fastmcp import FastMCP
 
+from . import __version__
 from .ckan import datastore_search, meta
 
 R_BROKERS = "a0f56034-88db-4132-8803-854bcdb01ca1"  # מאגר מתווכים פעילים
@@ -101,6 +102,7 @@ NOT_OPEN = {
 
 mcp = FastMCP(
     "mcp-il-professionals",
+    version=__version__,
     instructions=(
         "Verify Israeli licensed professionals before hiring. Professions: " + ", ".join(REGISTRIES)
         + ". Use find_contractors for registered building contractors by city/branch. Electricians, engineers and "
