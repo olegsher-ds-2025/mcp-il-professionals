@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mcp-il-professionals"
-version = "0.1.1"
+version = "0.1.2"
 description = "Verify licensed professionals in Israel for AI agents: real-estate brokers, registered contractors, appraisers, CPAs, surveyors, private investigators — live from data.gov.il"
 readme = "README.md"
 requires-python = ">=3.11"
